@@ -1,0 +1,19 @@
+ALGORITHM count_char
+VAR
+    str:STRING
+    word,vowel,charactere,1,INTEGER
+BEGIN
+    read(str)
+    FOR i FROM 0 TO str.length-1 STEP 1  DO
+        charactere:=charactere+1;
+        IF (str[i]=" "or str[i]=" . " ) THEN
+            word:=word+1;
+        END_IF
+        IF (str[i] IN ("a","e","i","a","u","y","A","E","I","O","U","Y")) THEN
+            vowel:=vowel+1;
+        END_IF
+    
+    write("the number of words",word);
+    write("the number of vowels",vowel);
+    write("the length of string",charactere);
+END
